@@ -27,13 +27,12 @@ function Portfolio() {
       title: 'Js Game',
       description: 'Players have to type in the correct word on time to score a point.',
       image: './jsgame.png',
-      link: 'https://teal-mooncake-246a4f.netlify.app/', // Optional link to the live project
+      link: 'https://teal-mooncake-246a4f.netlify.app/',
     },
-    // Add more projects here
   ];
 
   return (
-    <section id="portfolio" className="bg-gray-100 py-20"> {/* Section for portfolio */}
+    <section id="portfolio" className="bg-white py-20"> {/* Section for portfolio */}
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Portfolio</h2>
 
