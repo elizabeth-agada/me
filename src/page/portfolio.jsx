@@ -2,18 +2,19 @@ import React from 'react';
 
 function Portfolio() {
   const projects = [
+
+    {
+      title: 'Onbuddy',
+      description: 'The solution from a GetlinkedAI Hackathon where i took part in the frontend team',
+      image: './onbuddy.png',
+      link: 'https://onbuddy.vercel.app/',
+    },
+
     {
       title: 'Landing page for cars',
       description: 'The very first static site I built using HTML and CSS.',
       image: './cars.png',
       link: 'https://whimsical-cucurucho-d58c9c.netlify.app',
-    },
-
-    {
-      title: 'Google Chrome Home',
-      description: 'Cloned the visual design for the Google Chrome homepage',
-      image: './google.png',
-      link: 'https://6376239b37dc9807438b15c1--zingy-taiyaki-91692f.netlify.app/',
     },
 
     {
@@ -28,6 +29,13 @@ function Portfolio() {
       description: 'Players have to type in the correct word on time to score a point.',
       image: './jsgame.png',
       link: 'https://teal-mooncake-246a4f.netlify.app/',
+    },
+
+    {
+      title: 'Google Chrome Home',
+      description: 'Cloned the visual design for the Google Chrome homepage',
+      image: './google.png',
+      link: 'https://6376239b37dc9807438b15c1--zingy-taiyaki-91692f.netlify.app/',
     },
   ];
 
