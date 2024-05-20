@@ -17,19 +17,19 @@ function Footer() {
         {/* Social Media Icons */}
         <div className="flex space-x-4 justify-center md:justify-end">
           {/* LinkedIn Icon */}
-          <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/elizabethagada" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className="h-6 w-6 hover:text-blue-400"/>
           </a>
           {/* Twitter Icon */}
-          <a href="https://twitter.com/your-twitter-handle" target="_blank" rel="noopener noreferrer">
+          <a href="https://twitter.com/Lizian_" target="_blank" rel="noopener noreferrer">
             <FaTwitterSquare className="h-6 w-6 hover:text-blue-400"/>
           </a>
           {/* GitHub Icon */}
-          <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/elizabeth-agada" target="_blank" rel="noopener noreferrer">
             <FaGithub className="h-6 w-6 hover:text-white"/>
           </a>
           {/* Medium Icon */}
-          <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">
+          <a href="https://medium.com/@elizabethagada" target="_blank" rel="noopener noreferrer">
             <FaMedium className="h-6 w-6 hover:text-white"/>
           </a>
           {/* Your other social media icons */}
