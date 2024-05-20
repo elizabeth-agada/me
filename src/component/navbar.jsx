@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar({ aboutRef, portfolioRef, blogRef, contactRef }) {
@@ -26,7 +26,6 @@ function Navbar({ aboutRef, portfolioRef, blogRef, contactRef }) {
     setIsMobileMenuOpen(false); 
   };
 
-  // Corrected function for handling menu click
   const handleMenuClick = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };

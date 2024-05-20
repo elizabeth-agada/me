@@ -7,21 +7,23 @@ function Blog() {
   const communityInitiatives = [
     {
       title: "3MTT Taraba Meetup",
-      description: "Description of  community initiative.",
+      description: "This was a great initiative that brought together tech enthusiasts in Taraba State. We had talks, workshops",
       image: "./3mtt.jpeg",
+      link: "/initiative1",
     },
 
     {
       title: "Build with AI Bauchi",
-      description: "Description of community initiative.",
+      description: "This community initiative focused on empowering individuals with knowledge and skills in artificial intelligence.",
       image: "./bd4.jpg",
+      link: "/initiative2",
     },
 
     {
       title: "API Day Jalingo",
-      description: "Description of community initiative.",
+      description: "API Day Jalingo was a focused event designed to promote the understanding and usage of APIs.",
       image: "./Apiday1.jpg",
-      link: "/initiative2",
+      link: "/initiative3",
     },
     
   ];
@@ -39,7 +41,7 @@ function Blog() {
       {
         breakpoint: 1024, // Adjust breakpoint for smaller screens
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -59,26 +61,30 @@ function Blog() {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
           Community
         </h2>
-        <Slider {...settings}> 
+        <Slider {...settings}>
           {communityInitiatives.map((initiative, index) => (
             <div key={index} className="">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden mx-2">
-                <img
-                  src={initiative.image}
-                  alt={initiative.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{initiative.title}</h3>
-                  <p className="text-gray-600">{initiative.description} <a href="#reed" className="text-blue-500">Read more</a></p>
+              <a href={initiative.link} className="block"> {/* Wrap the entire card content in an anchor tag */}
+                <div className="bg-white rounded-lg shadow-md overflow-hidden mx-2">
+                  <img
+                    src={initiative.image}
+                    alt={initiative.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2">{initiative.title}</h3>
+                    <p className="text-gray-600">
+                      {initiative.description} <span className="text-blue-500">Read more</span> {/* Use a span for styling the "Read more" link */}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           ))}
         </Slider>
       </div>
     </section>
   );
+  
 }
-
 export default Blog;
