@@ -3,6 +3,9 @@ import Navbar from '../component/navbar'
 import Hero from './hero'
 import About from './about'
 import Portfolio from './portfolio'
+import Blog from './blog'
+import Contact from './contact'
+import Footer from '../component/footer'
 
 function home() {
   return (
@@ -11,6 +14,9 @@ function home() {
       <Hero />
       <About />
       <Portfolio />
+      <Blog />
+      <Contact />
+      <Footer />
      
     </div>
   )

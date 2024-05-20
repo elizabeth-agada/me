@@ -41,3 +41,26 @@
   opacity: 1;
   transition: opacity 1s ease-in;
 }
+
+/* Slick Carousel Styles */
+.blog-carousel .slick-dots li button:before {
+  color: #1E3A8A; /* Dot color */
+}
+.blog-carousel .slick-dots li.slick-active button:before {
+  color: #06B6D4; /* Active dot color */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .blog-carousel {
+    .slick-slide {
+      margin: 0 10px;
+      margin-bottom: 2rem; /* Add margin for better spacing on mobile */
+    }
+    .slick-list {
+      margin: 0 -10px; /* Adjust for the added margin */
+    }
+  }
+}
+
+

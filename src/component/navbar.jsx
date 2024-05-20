@@ -1,18 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ aboutRef, portfolioRef, blogRef, contactRef }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+
+      setIsVisible(
+        (prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10
+      );
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos]);
+
+  const handleLinkClick = (ref) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' }); 
+    setIsMobileMenuOpen(false); 
+  };
+
+  // Corrected function for handling menu click
   const handleMenuClick = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <header className="bg-gradient-to-r from-[#1E3A8A] to-[#06B6D4] text-white p-4 fixed top-0 left-0 right-0 z-10">
+    <header 
+      className={`${isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 -translate-y-full'} 
+                 bg-gradient-to-r from-[#1E3A8A] to-[#06B6D4] text-white p-4 fixed top-0 left-0 right-0 z-10 
+                 transition-all duration-300`}
+    >
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo/Branding */}
-        <Link to="/">
+        <Link to="/" onClick={() => handleLinkClick(aboutRef)}>
           <h1 className="text-3xl font-bold">Liz</h1>
         </Link>
 
@@ -32,23 +59,20 @@ function Navbar() {
           </svg>
         </button>
 
-        {/* Navigation Links */}
+        {/* Navigation Links (Visible on Desktop, Hidden on Mobile Initially) */}
         <nav className={`hidden md:flex space-x-4 ${isMobileMenuOpen ? 'flex' : ''}`}>
           <ul className="flex space-x-4">
-            <li>
-              <Link to="/" className="text-white">Home</Link>
+            <li onClick={() => handleLinkClick(aboutRef)}>
+              <button className="text-white">About</button>
             </li>
-            <li>
-              <Link to="/about" className="text-white">About</Link> 
+            <li onClick={() => handleLinkClick(portfolioRef)}>
+              <button className="text-white">Portfolio</button>
             </li>
-            <li>
-              <Link to="/portfolio" className="text-white">Portfolio</Link>
+            <li onClick={() => handleLinkClick(blogRef)}>
+              <button className="text-white">Blog</button>
             </li>
-            <li>
-              <Link to="/blog" className="text-white">Blog</Link>
-            </li>
-            <li>
-              <Link to="/contact" className="text-white">Contact</Link>
+            <li onClick={() => handleLinkClick(contactRef)}>
+              <button className="text-white">Contact</button>
             </li>
           </ul>
         </nav>
@@ -56,11 +80,10 @@ function Navbar() {
 
       {/* Mobile Menu (Hidden on Desktop, Visible on Mobile when Button is Clicked) */}
       <div className={`md:hidden ${isMobileMenuOpen ? '' : 'hidden'} flex flex-col space-y-2 mt-4`}>
-        <Link to="/" className="text-white text-left">Home</Link>
-        <Link to="/about" className="text-white text-left">About</Link>
-        <Link to="/portfolio" className="text-white text-left">Portfolio</Link>
-        <Link to="/blog" className="text-white text-left">Blog</Link>
-        <Link to="/contact" className="text-white text-left">Contact</Link>
+        <button onClick={() => handleLinkClick(aboutRef)} className="text-white text-left">About</button>
+        <button onClick={() => handleLinkClick(portfolioRef)} className="text-white text-left">Portfolio</button>
+        <button onClick={() => handleLinkClick(blogRef)} className="text-white text-left">Blog</button>
+        <button onClick={() => handleLinkClick(contactRef)} className="text-white text-left">Contact</button>
       </div>
     </header>
   );

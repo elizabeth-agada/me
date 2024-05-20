@@ -11,7 +11,7 @@ function Hero() {
 
   return (
     <section
-      className="relative bg-gradient-to-r from-[#1E3A8A] to-[#06B6D4] text-white py-20 mt-16"
+      className="relative bg-gradient-to-r from-[#1E3A8A] to-[#06B6D4] text-white py-20"
       style={{
         backgroundImage: `url(./liz.jpg)`,
         backgroundSize: 'cover',
@@ -29,7 +29,7 @@ function Hero() {
             Frontend Engineer | Community Manager
           </p>
           <button className="bg-white text-blue-500 font-bold py-3 px-6 rounded-full mt-8 hover:bg-gray-200">
-            Get in Touch
+            <a href="https://wa.link/salvtr" className="">Get in Touch</a> 
           </button>
         </div>
       </div>
