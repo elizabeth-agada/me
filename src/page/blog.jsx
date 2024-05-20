@@ -7,7 +7,7 @@ function Blog() {
   const communityInitiatives = [
     {
       title: "3MTT Taraba Meetup",
-      description: "Descriptionof  community initiative.",
+      description: "Description of  community initiative.",
       image: "./3mtt.jpeg",
     },
 
@@ -39,7 +39,7 @@ function Blog() {
       {
         breakpoint: 1024, // Adjust breakpoint for smaller screens
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -54,14 +54,14 @@ function Blog() {
   };
 
   return (
-    <section id="blog" className="py-20 bg-gray-100 px-10">
+    <section id="blog" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
           Community
         </h2>
         <Slider {...settings}> 
           {communityInitiatives.map((initiative, index) => (
-            <div key={index} className="px-4 md:px-0">
+            <div key={index} className="">
               <div className="bg-white rounded-lg shadow-md overflow-hidden mx-2">
                 <img
                   src={initiative.image}
