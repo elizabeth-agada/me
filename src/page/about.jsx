@@ -1,6 +1,16 @@
 import React from 'react';
+import { useEffect, useRef } from 'react';
 
 function About() {
+
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+
+  useEffect(() => {
+    titleRef.current.classList.add('fade-in');
+    setTimeout(() => subtitleRef.current.classList.add('fade-in'), 500); // Delay for the subtitle
+  }, []); // Run the effect only once on mount
+
   return (
     <section className="bg-gray-900 py-20">
       <div className="container mx-auto px-4">
@@ -8,13 +18,13 @@ function About() {
           <div className="md:w-1/2">
             <img 
               src='./liz3.png' 
-              alt="Liz" 
+              alt="Liz"
               className="rounded-full w-64 h-64 mx-auto md:mx-32" 
             />
           </div>
           <div className="md:w-1/2 md:ml-16 mt-8 md:mt-0">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-200">About Me</h2>
-            <p className="text-gray-200 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-200" ref={titleRef}>About Me</h2>
+            <p ref={subtitleRef} className="text-gray-200 mb-4">
               As a frontend engineer, I'm driven by my passion for building exceptional web experiences. 
               I specialize in crafting intuitive, accessible, and visually appealing user interfaces using modern technologies like React and Tailwind CSS.
             </p>

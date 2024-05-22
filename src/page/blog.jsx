@@ -56,9 +56,9 @@ function Blog() {
   };
 
   return (
-    <section id="blog" className="py-20 bg-gray-100">
+    <section id="blog" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+        <h2 className="text-3xl md:text-4xl text-white font-bold text-center mb-8">
           Community
         </h2>
         <Slider {...settings}>
@@ -69,7 +69,7 @@ function Blog() {
                   <img
                     src={initiative.image}
                     alt={initiative.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-24 md:h-48 object-cover"
                   />
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{initiative.title}</h3>
