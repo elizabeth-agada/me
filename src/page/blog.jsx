@@ -71,7 +71,7 @@ function Blog() {
                     alt={initiative.title}
                     className="w-full h-12 md:h-48 object-cover"
                   />
-                  <div className="p-6 text-left">
+                  <div className="text-left">
                     <h3 className="md:text-xl font-bold mb-2">{initiative.title}</h3>
                     <p className="sm:text-sm text-gray-600">
                       {initiative.description} <span className="text-blue-500">Read more</span> {/* Use a span for styling the "Read more" link */}
