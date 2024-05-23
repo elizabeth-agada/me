@@ -20,9 +20,9 @@ function Hero() {
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0b32a0]"></div>
-      <div className="container mx-auto relative flex flex-col md:flex-row p-24">
-        <div className="md:w-1/2 md:text-left mb-8 md:mb-0">
-          <h1 ref={titleRef} className="text-3xl md:text-6xl font-bold leading-tight opacity-0"> {/* Added ref and opacity-0 */}
+      <div className="container mx-auto relative flex flex-col md:flex-row p-20">
+        <div className="md:w-1/2 md:text-left mb-4 md:mb-0">
+          <h1 ref={titleRef} className="text-2xl md:text-6xl font-bold leading-tight opacity-0"> {/* Added ref and opacity-0 */}
             Hi, I'm Elizabeth!
           </h1>
           <p ref={subtitleRef} className="text-xl md:text-3xl mt-4 opacity-0"> {/* Added ref and opacity-0 */}

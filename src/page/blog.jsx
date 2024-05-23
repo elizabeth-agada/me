@@ -56,8 +56,8 @@ function Blog() {
   };
 
   return (
-    <section id="blog" className="p-10 md:p-24 bg-gray-900">
-      <div className="container mx-auto px-2 md:px-4">
+    <section id="blog" className="p-8 md:p-24 bg-gray-900">
+      <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-4xl text-white font-bold text-center mb-8">
           Community
         </h2>
