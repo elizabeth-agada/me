@@ -56,7 +56,7 @@ function Blog() {
   };
 
   return (
-    <section id="blog" className="p-8 md:p-24 bg-gray-900">
+    <section id="blog" className="p-6 md:p-24 bg-gray-900">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-4xl text-white font-bold text-center mb-8">
           Community
@@ -69,7 +69,7 @@ function Blog() {
                   <img
                     src={initiative.image}
                     alt={initiative.title}
-                    className="w-full h-24 md:h-48 object-cover"
+                    className="w-full h-12 md:h-48 object-cover"
                   />
                   <div className="p-6 text-left">
                     <h3 className="md:text-xl font-bold mb-2">{initiative.title}</h3>
