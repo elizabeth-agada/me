@@ -28,7 +28,7 @@ function About() {
               As a frontend engineer, I'm driven by my passion for building exceptional web experiences. 
               I specialize in crafting intuitive, accessible, and visually appealing user interfaces using modern technologies like React and Tailwind CSS.
             </p>
-            <p className="text-white mb-4">
+            <p ref={subtitleRef} className="text-white mb-4">
               My commitment to user-centric design and collaboration extends beyond code.
               I thrive as a community manager, fostering vibrant online spaces where developers can connect, learn, and grow.
             </p>
