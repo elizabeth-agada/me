@@ -56,9 +56,9 @@ function Blog() {
   };
 
   return (
-    <section id="blog" className="py-20 bg-gray-900">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl text-white font-bold text-center mb-8">
+    <section id="blog" className="p-10 md:p-24 bg-gray-900">
+      <div className="container mx-auto px-2 md:px-4">
+        <h2 className="text-2xl md:text-4xl text-white font-bold text-center mb-8">
           Community
         </h2>
         <Slider {...settings}>
@@ -71,9 +71,9 @@ function Blog() {
                     alt={initiative.title}
                     className="w-full h-24 md:h-48 object-cover"
                   />
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{initiative.title}</h3>
-                    <p className="text-gray-600">
+                  <div className="p-6 text-left">
+                    <h3 className="md:text-xl font-bold mb-2">{initiative.title}</h3>
+                    <p className="sm:text-sm text-gray-600">
                       {initiative.description} <span className="text-blue-500">Read more</span> {/* Use a span for styling the "Read more" link */}
                     </p>
                   </div>

@@ -20,15 +20,15 @@ function Hero() {
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0b32a0]"></div>
-      <div className="container mx-auto relative flex flex-col md:flex-row px-4">
+      <div className="container mx-auto relative flex flex-col md:flex-row p-24">
         <div className="md:w-1/2 md:text-left mb-8 md:mb-0">
-          <h1 ref={titleRef} className="text-5xl md:text-6xl font-bold leading-tight opacity-0"> {/* Added ref and opacity-0 */}
+          <h1 ref={titleRef} className="text-3xl md:text-6xl font-bold leading-tight opacity-0"> {/* Added ref and opacity-0 */}
             Hi, I'm Elizabeth!
           </h1>
-          <p ref={subtitleRef} className="text-2xl md:text-3xl mt-4 opacity-0"> {/* Added ref and opacity-0 */}
+          <p ref={subtitleRef} className="text-xl md:text-3xl mt-4 opacity-0"> {/* Added ref and opacity-0 */}
             Frontend Engineer | Community Manager
           </p>
-          <button className="bg-white text-blue-500 font-bold py-3 px-6 rounded-full mt-8 hover:bg-gray-200">
+          <button className="bg-gray-900 text-blue-500 font-bold py-3 px-6 rounded-full mt-8 hover:bg-gray-200">
             <a href="https://wa.link/salvtr" className="">Get in Touch</a> 
           </button>
         </div>

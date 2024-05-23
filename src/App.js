@@ -78,7 +78,7 @@ function App() {
             />
             <button
               type="submit"
-              className="mt-4 px-6 py-3 bg-white text-gray-900 rounded hover:bg-gray-300 focus:outline-none"
+              className="mt-4 px-6 py-3 bg-blue-800 text-white rounded hover:bg-gray-300 focus:outline-none"
             >
               Enter
             </button>

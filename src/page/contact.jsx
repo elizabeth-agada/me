@@ -15,9 +15,9 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-gray-900 text-white py-20">
+    <section id="contact" className="bg-gray-900 text-white p-10 md:p-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Get in Touch</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">Get in Touch</h2>
 
         <div className="flex flex-col md:flex-row md:justify-between">
           {/* Contact Form */}

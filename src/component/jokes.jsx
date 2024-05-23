@@ -19,7 +19,7 @@ function Jokes() {
 
   return (
     <div className="jokes">
-      <h2 className='font-bold'>Have fun while at it...</h2>
+      <h2 className='text-2xl' style={{ fontFamily: 'Comic Sans MS' }}>Have fun while at it...😄</h2>
       <p className='text-yellow-400'>{joke}</p>
     </div>
   );

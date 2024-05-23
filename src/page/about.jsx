@@ -23,7 +23,7 @@ function About() {
             />
           </div>
           <div className="md:w-1/2 md:ml-16 mt-8 md:mt-0">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-200" ref={titleRef}>About Me</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-gray-200" ref={titleRef}>About Me</h2>
             <p ref={subtitleRef} className="text-gray-200 mb-4">
               As a frontend engineer, I'm driven by my passion for building exceptional web experiences. 
               I specialize in crafting intuitive, accessible, and visually appealing user interfaces using modern technologies like React and Tailwind CSS.
