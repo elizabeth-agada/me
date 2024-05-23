@@ -36,10 +36,17 @@ function Contact() {
             </div>
             
             <div className="mb-4">
-              <input type="email" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email" />
+              <input 
+              type="email"
+              id='email'
+              name='email' 
+              value={formData.email}
+              onChange={handleChange}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email" />
             </div>
             <div className="mb-4">
-              <textarea className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Message" rows="5"></textarea>
+              <textarea
+               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Message" rows="5"></textarea>
             </div>
           
             <div className="flex items-center justify-center"> {/* Center the button */}
