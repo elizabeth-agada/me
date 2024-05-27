@@ -1,8 +1,7 @@
-import React from 'react';
-import { useEffect, useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
+import { FaTimes } from 'react-icons/fa';
 
-function About() {
-
+function About({ onClose }) { // Receive onClose function as a prop
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
 
@@ -11,8 +10,16 @@ function About() {
     setTimeout(() => subtitleRef.current.classList.add('fade-in'), 500); // Delay for the subtitle
   }, []); // Run the effect only once on mount
 
+  const handleClose = () => {
+    onClose(); // Invoke onClose function passed from parent
+  };
+
   return (
-    <section className="bg-gray-900 py-20">
+    <div className="bg-gray-900 md:py-20 relative">
+      {/* Close icon */}
+      <button onClick={handleClose} className="absolute top-0 right-0 m-4 text-gray-200 hover:text-white">
+        <FaTimes />
+      </button>
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2">
@@ -32,11 +39,10 @@ function About() {
               My commitment to user-centric design and collaboration extends beyond code.
               I thrive as a community manager, fostering vibrant online spaces where developers can connect, learn, and grow.
             </p>
-            
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

@@ -2,8 +2,13 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; // Import Slick CSS files
+import { FaTimes } from 'react-icons/fa';
 
-function Blog() {
+function Blog({ onClose }) {
+  const handleClose = () => {
+    onClose(); // Invoke onClose function passed from parent
+  };
+
   const communityInitiatives = [
     {
       title: "3MTT Taraba Meetup",
@@ -56,7 +61,11 @@ function Blog() {
   };
 
   return (
-    <section id="blog" className="p-6 md:p-24 bg-gray-900">
+    <section id="blog" className="p-6 md:p-24 bg-gray-900 relative overflow-hidden">
+      {/* Close icon */}
+      <button onClick={handleClose} className="absolute top-0 right-0 m-4 text-gray-200 hover:text-white">
+        <FaTimes />
+      </button>
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-4xl text-white font-bold text-center mb-8">
           Community
@@ -85,6 +94,6 @@ function Blog() {
       </div>
     </section>
   );
-  
 }
+
 export default Blog;
