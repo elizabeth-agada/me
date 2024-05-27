@@ -29,7 +29,7 @@ function HomePage({ isHomePage }) {
       )}
       <div className="fixed top-0 left-0 w-full h-full bg-cover" style={{ backgroundImage: `url(./web3.avif)` }} />
       <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
-        <div className="mt-32 md:mt-60 flex items-center border mb-4 md:text-3xl rounded-lg border-gray-200 py-2 px-10 md:px-32 text-white">
+        <div className="mt-28 md:mt-60 flex items-center border mb-4 md:text-3xl rounded-lg border-gray-200 py-2 px-10 md:px-32 text-white">
           <h1>Frontend Engineer</h1>
         </div>
         <div className=" px-5 md:px-0 p-4 rounded-md shadow-md max-w-md w-full mx-auto mb-8 bg-black bg-opacity-50 backdrop-blur-lg">
