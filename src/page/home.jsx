@@ -32,7 +32,7 @@ function HomePage({ isHomePage }) {
         <div className="mt-28 md:mt-60 flex items-center border mb-4 md:text-3xl rounded-lg border-gray-200 py-2 px-10 md:px-32 text-white">
           <h1>Frontend Engineer</h1>
         </div>
-        <div className=" px-5 md:px-0 p-4 rounded-md shadow-md max-w-md w-full mx-auto mb-8 bg-black bg-opacity-50 backdrop-blur-lg">
+        <div className=" px-5 md:px-0 p-4 rounded-md shadow-md max-w-md w-full mx-auto mb-8 md:bg-black md:bg-opacity-50 md:backdrop-blur-lg">
           <div className="space-y-5 md:space-y-0 md:grid grid-cols-5  gap-4 mt-4">
             {/* Home Icon */}
             <div className="md:flex flex-col items-center  text-white cursor-pointer" onClick={() => openPopup('home')}>
@@ -92,7 +92,7 @@ function HomePage({ isHomePage }) {
           </p>
           
           {/* Social Media Icons */}
-          <div className="flex space-x-4 justify-center md:justify-end mb-4">
+          <div className="flex space-x-4 justify-center md:justify-end md:mb-4 mb-12">
             {/* LinkedIn Icon */}
             <a href="https://www.linkedin.com/in/elizabethagada" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="h-6 w-6 hover:text-blue-400" />

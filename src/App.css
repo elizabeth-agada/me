@@ -85,11 +85,6 @@
   animation: typing 2s steps(40, end);
 }
 
-.gradient-background {
-  background: linear-gradient(to right, #b61b8f, #2e20f8, #1ABC9C, #da08d0) !important;
-}
-
-
 
 
 

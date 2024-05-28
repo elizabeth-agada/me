@@ -15,7 +15,7 @@ function About({ onClose }) { // Receive onClose function as a prop
   };
 
   return (
-    <div className="bg-gray-900 md:py-20 relative">
+    <div className="bg-gradient-to-r from-[#1E3A8A] to-[#060229e7] md:py-20 relative md:w-2/3">
       {/* Close icon */}
       <button onClick={handleClose} className="absolute top-0 right-0 m-4 text-gray-200 hover:text-white">
         <FaTimes />
@@ -29,8 +29,8 @@ function About({ onClose }) { // Receive onClose function as a prop
               className="rounded-full w-64 h-64 mx-auto md:mx-32" 
             />
           </div>
-          <div className="md:w-1/2 md:ml-16 mt-8 md:mt-0">
-            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-gray-200" ref={titleRef}>About Me</h2>
+          <div className="text-left md:w-1/2 md:ml-16 mt-8 md:mt-0">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white" ref={titleRef}>About Me</h2>
             <p ref={subtitleRef} className="text-gray-200 mb-4">
               As a frontend engineer, I'm driven by my passion for building exceptional web experiences. 
               I specialize in crafting intuitive, accessible, and visually appealing user interfaces using modern technologies like React and Tailwind CSS.

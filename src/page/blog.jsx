@@ -61,7 +61,7 @@ function Blog({ onClose }) {
   };
 
   return (
-    <section id="blog" className="p-6 md:p-24 bg-gray-900 relative overflow-hidden">
+    <section id="blog" className="md:w-2/3 p-6 md:p-24 bg-gradient-to-r from-[#1E3A8A] to-[#060229e7]  relative overflow-hidden">
       {/* Close icon */}
       <button onClick={handleClose} className="absolute top-0 right-0 m-4 text-gray-200 hover:text-white">
         <FaTimes />

@@ -40,17 +40,17 @@ function Portfolio({ onClose }) {
   ];
 
   return (
-    <section id="portfolio" className="mt-56 bg-gray-900 text-white">
-      <div className="container mx-auto px-4 relative">
-        <button onClick={handleClose} className="absolute top-0 right-0 m-4 text-gray-200 hover:text-white">
+    <section id="portfolio" className="h-screen mb-10 overflow-y-auto mt-20 md:mt-56 p-6 bg-gradient-to-r from-[#1E3A8A] to-[#060229e7]  text-white relative md:w-2/3">
+      <div className="container mx-auto px-4">
+        <button onClick={handleClose} className="absolute top-0 right-0 m-4 text-gray-200 hover:text-white z-10">
           <FaTimes />
         </button>
-        <h2 className="py-4 text-2xl md:text-4xl font-bold text-center mb-8 text-white">Portfolio</h2>
-
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 text-white">Portfolio</h2>
+  
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+              <img src={project.image} alt={project.title} className="w-full object-cover" />
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                 <p className="text-gray-600 mb-4">{project.description}</p>
@@ -66,6 +66,9 @@ function Portfolio({ onClose }) {
       </div>
     </section>
   );
+  
+  
+  
 }
 
 export default Portfolio;

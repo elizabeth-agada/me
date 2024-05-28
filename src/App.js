@@ -1,13 +1,10 @@
 import './App.css';
 import { useState, useEffect} from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import Initiative1 from './page/initiative1';
-import Initiative2 from './page/initiative2';
-import Initiative3 from './page/initiative3';
-
-
+import { useLocation } from 'react-router-dom';
 import Jokes from './component/jokes'; // Import TechJokes component
 import HomePage from './page/home';
+
+
 
 function App() {
   const location = useLocation();
@@ -47,7 +44,7 @@ function App() {
     <div className="App">
       {isLoading && (
         // Loading animation with welcome message, joke, and name input form
-        <div className="loading-animation h-screen bg-gray-900 p-6 md:p-32 text-white flex flex-col justify-center items-center">
+        <div className="loading-animation h-screen bg-gradient-to-r from-[#1E3A8A] to-[#060229e7] p-6 md:p-32 text-white flex flex-col justify-center items-center">
           <div className="w-32 md:w-2/3 md:text-left flex justify-between">
             <img 
               src='./liz3.png' 
@@ -83,12 +80,12 @@ function App() {
         <>
           <HomePage isHomePage={isHomePage} />
 
-          <Routes>
+          {/*<Routes>
            
             <Route path="/initiative1" element={<Initiative1 />} />
             <Route path="/initiative2" element={<Initiative2 />} />
             <Route path="/initiative3" element={<Initiative3 />} />
-          </Routes>
+      </Routes>*/}
           
         </>
       )}

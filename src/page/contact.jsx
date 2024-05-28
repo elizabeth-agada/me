@@ -20,7 +20,7 @@ function Contact({ onClose }) {
   };
 
   return (
-    <section id="contact" className="relative bg-gray-900 text-white md:px-56 p-6">
+    <section id="contact" className="relative bg-gradient-to-r from-[#1E3A8A] to-[#060229e7]  text-white md:px-56 p-6">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">Get in Touch</h2>
         <button onClick={handleClose} className="absolute top-0 right-0 m-4 text-gray-200 hover:text-white">
