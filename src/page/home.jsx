@@ -92,7 +92,7 @@ function HomePage({ isHomePage }) {
           </p>
           
           {/* Social Media Icons */}
-          <div className="flex space-x-4 justify-center md:justify-end md:mb-4 mb-12">
+          <div className="flex space-x-4 justify-center md:justify-end md:mb-4 mb-10">
             {/* LinkedIn Icon */}
             <a href="https://www.linkedin.com/in/elizabethagada" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="h-6 w-6 hover:text-blue-400" />
