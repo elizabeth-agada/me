@@ -27,6 +27,11 @@ function HomePage({ isHomePage }) {
     };
   }, []);
 
+  const name = "Elizabeth Agada";
+  const nameLetters = name.split("").map((letter, index) => (
+    <span key={index} className="letter">{letter}</span>
+  ));
+
   return (
     <div className="min-h-screen">
       {isHomePage && ( // Render loading animation only on the home page
@@ -36,8 +41,9 @@ function HomePage({ isHomePage }) {
       )}
       <div className="fixed top-0 left-0 w-full h-full bg-cover" style={{ backgroundImage: `url(./bg.jpg)` }} />
       <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
-        <div className="mt-28 md:mt-60 flex items-center mb-4 md:text-3xl rounded-lg border-gray-200 py-2 px-10 md:px-32 text-white fade-in-up">
-          <h1>Frontend Engineer</h1>
+        <div className="mt-28 md:mt-60 items-center mb-4 md:text-3xl rounded-lg border-gray-200 py-2 px-10 md:px-32 text-white fade-in-up">
+          <h1 className="text-2xl">{nameLetters}</h1>
+          <h1 className=''>Frontend Engineer</h1>
         </div>
         <div className="px-5 md:px-0 p-4 rounded-md shadow-md max-w-md w-full mx-auto mb-8 md:bg-black md:bg-opacity-50 md:backdrop-blur-lg">
           <div className="space-y-5 md:space-y-0 md:grid grid-cols-5 gap-4 mt-4">
