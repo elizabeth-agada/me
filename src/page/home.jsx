@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { FaHome, FaInfoCircle, FaFolderOpen, FaBlog, FaEnvelope, FaLinkedin, FaTwitterSquare, FaGithub, FaMedium } from 'react-icons/fa'; // Import icons
+import React, { useState, useEffect } from 'react';
+import { FaHome, FaInfoCircle, FaFolderOpen, FaBlog, FaEnvelope, FaLinkedin, FaTwitterSquare, FaGithub, FaMedium } from 'react-icons/fa';
 import About from './about';
 import Portfolio from './portfolio';
 import Blog from './blog';
@@ -17,8 +17,18 @@ function HomePage({ isHomePage }) {
     setActivePopup(null);
   };
 
+  useEffect(() => {
+    // Apply overflow hidden to body when component mounts
+    document.body.style.overflow = 'hidden';
+
+    // Clean up and remove overflow hidden from body when component unmounts
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
   return (
-    <div className="relative min-h-screen">
+    <div className="min-h-screen">
       {isHomePage && ( // Render loading animation only on the home page
         <Link to="/" className="loading-animation h-full md:h-screen p-6 md:p-32 text-white flex flex-col justify-center items-center">
           {/* Loading animation content */}
@@ -32,29 +42,29 @@ function HomePage({ isHomePage }) {
         <div className="px-5 md:px-0 p-4 rounded-md shadow-md max-w-md w-full mx-auto mb-8 md:bg-black md:bg-opacity-50 md:backdrop-blur-lg">
           <div className="space-y-5 md:space-y-0 md:grid grid-cols-5 gap-4 mt-4">
             {/* Home Icon */}
-            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer " onClick={() => openPopup('home')}>
+            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer menu-item" onClick={() => openPopup('home')}>
               <FaHome className="text-4xl" />
-              <span className="text-sm mt-1 menu-item">Home</span>
+              <span className="text-sm mt-1">Home</span>
             </div>
             {/* About Icon */}
-            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer " onClick={() => openPopup('about')}>
+            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer menu-item" onClick={() => openPopup('about')}>
               <FaInfoCircle className="text-4xl" />
-              <span className="text-sm mt-1 menu-item">About</span>
+              <span className="text-sm mt-1">About</span>
             </div>
             {/* Portfolio Icon */}
-            <div className="text-white md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 cursor-pointer " onClick={() => openPopup('portfolio')}>
+            <div className="text-white md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 cursor-pointer menu-item" onClick={() => openPopup('portfolio')}>
               <FaFolderOpen className="text-4xl" />
-              <span className="text-sm mt-1 menu-item">Portfolio</span>
+              <span className="text-sm mt-1">Portfolio</span>
             </div>
             {/* Blog Icon */}
-            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer " onClick={() => openPopup('blog')}>
+            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer menu-item" onClick={() => openPopup('blog')}>
               <FaBlog className="text-4xl" />
-              <span className="text-sm mt-1 menu-item">Community</span>
+              <span className="text-sm mt-1">Community</span>
             </div>
             {/* Contact Icon */}
-            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer " onClick={() => openPopup('contact')}>
+            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer menu-item" onClick={() => openPopup('contact')}>
               <FaEnvelope className="text-4xl" />
-              <span className="text-sm mt-1 menu-item">Contact</span>
+              <span className="text-sm mt-1">Contact</span>
             </div>
           </div>
         </div>
@@ -106,7 +116,6 @@ function HomePage({ isHomePage }) {
             <a href="https://medium.com/@elizabethagada" target="_blank" rel="noopener noreferrer" className="social-media-icon">
               <FaMedium className="h-6 w-6 hover:text-blue-400" />
             </a>
-            {/* Your other social media icons */}
           </div>
         </footer>
       </div>
