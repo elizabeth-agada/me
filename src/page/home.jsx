@@ -20,7 +20,7 @@ function HomePage({ isHomePage }) {
   return (
     <div className="relative min-h-screen">
       {isHomePage && ( // Render loading animation only on the home page
-        <Link to="/" className="loading-animation h-screen bg-gray-900 p-6 md:p-32 text-white flex flex-col justify-center items-center">
+        <Link to="/" className="loading-animation h-full md:h-screen p-6 md:p-32 text-white flex flex-col justify-center items-center">
           {/* Loading animation content */}
         </Link>
       )}
@@ -29,32 +29,32 @@ function HomePage({ isHomePage }) {
         <div className="mt-28 md:mt-60 flex items-center mb-4 md:text-3xl rounded-lg border-gray-200 py-2 px-10 md:px-32 text-white fade-in-up">
           <h1>Frontend Engineer</h1>
         </div>
-        <div className=" px-5 md:px-0 p-4 rounded-md shadow-md max-w-md w-full mx-auto mb-8 md:bg-black md:bg-opacity-50 md:backdrop-blur-lg">
-          <div className="space-y-5 md:space-y-0 md:grid grid-cols-5  gap-4 mt-4">
+        <div className="px-5 md:px-0 p-4 rounded-md shadow-md max-w-md w-full mx-auto mb-8 md:bg-black md:bg-opacity-50 md:backdrop-blur-lg">
+          <div className="space-y-5 md:space-y-0 md:grid grid-cols-5 gap-4 mt-4">
             {/* Home Icon */}
-            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer menu-item" onClick={() => openPopup('home')}>
+            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer " onClick={() => openPopup('home')}>
               <FaHome className="text-4xl" />
-              <span className="text-sm mt-1">Home</span>
+              <span className="text-sm mt-1 menu-item">Home</span>
             </div>
             {/* About Icon */}
-            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer menu-item" onClick={() => openPopup('about')}>
+            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer " onClick={() => openPopup('about')}>
               <FaInfoCircle className="text-4xl" />
-              <span className="text-sm mt-1">About</span>
+              <span className="text-sm mt-1 menu-item">About</span>
             </div>
             {/* Portfolio Icon */}
-            <div className="text-white md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 cursor-pointer menu-item" onClick={() => openPopup('portfolio')}>
+            <div className="text-white md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 cursor-pointer " onClick={() => openPopup('portfolio')}>
               <FaFolderOpen className="text-4xl" />
-              <span className="text-sm mt-1">Portfolio</span>
+              <span className="text-sm mt-1 menu-item">Portfolio</span>
             </div>
             {/* Blog Icon */}
-            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer menu-item" onClick={() => openPopup('blog')}>
+            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer " onClick={() => openPopup('blog')}>
               <FaBlog className="text-4xl" />
-              <span className="text-sm mt-1">Community</span>
+              <span className="text-sm mt-1 menu-item">Community</span>
             </div>
             {/* Contact Icon */}
-            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer menu-item" onClick={() => openPopup('contact')}>
+            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer " onClick={() => openPopup('contact')}>
               <FaEnvelope className="text-4xl" />
-              <span className="text-sm mt-1">Contact</span>
+              <span className="text-sm mt-1 menu-item">Contact</span>
             </div>
           </div>
         </div>
@@ -91,19 +91,19 @@ function HomePage({ isHomePage }) {
           {/* Social Media Icons */}
           <div className="flex space-x-4 justify-center md:justify-end md:mb-4 mb-10">
             {/* LinkedIn Icon */}
-            <a href="https://www.linkedin.com/in/elizabethagada" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/elizabethagada" target="_blank" rel="noopener noreferrer" className="social-media-icon">
               <FaLinkedin className="h-6 w-6 hover:text-blue-400" />
             </a>
             {/* Twitter Icon */}
-            <a href="https://twitter.com/Lizian_" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com/Lizian_" target="_blank" rel="noopener noreferrer" className="social-media-icon">
               <FaTwitterSquare className="h-6 w-6 hover:text-blue-400" />
             </a>
             {/* GitHub Icon */}
-            <a href="https://github.com/elizabeth-agada" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/elizabeth-agada" target="_blank" rel="noopener noreferrer" className="social-media-icon">
               <FaGithub className="h-6 w-6 hover:text-blue-400" />
             </a>
             {/* Medium Icon */}
-            <a href="https://medium.com/@elizabethagada" target="_blank" rel="noopener noreferrer">
+            <a href="https://medium.com/@elizabethagada" target="_blank" rel="noopener noreferrer" className="social-media-icon">
               <FaMedium className="h-6 w-6 hover:text-blue-400" />
             </a>
             {/* Your other social media icons */}
