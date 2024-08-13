@@ -6,7 +6,7 @@ import Blog from './blog';
 import Contact from './contact';
 import { Link } from 'react-router-dom';
 
-function HomePage({ isHomePage }) {
+function HomePage({ isHomePage, handleGoHome }) {
   const [activePopup, setActivePopup] = useState(null);
 
   const openPopup = (popupName) => {
@@ -48,7 +48,7 @@ function HomePage({ isHomePage }) {
         <div className="px-5 md:px-0 p-4 rounded-md shadow-md max-w-md w-full mx-auto mb-8 md:bg-black md:bg-opacity-50 md:backdrop-blur-lg">
           <div className="space-y-5 md:space-y-0 md:grid grid-cols-5 gap-4 mt-4">
             {/* Home Icon */}
-            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer menu-item" onClick={() => openPopup('home')}>
+            <div className="md:flex md:flex-col flex justify-start items-center gap-3 md:gap-0 text-white cursor-pointer menu-item" onClick={(handleGoHome)}>
               <FaHome className="text-4xl" />
               <span className="text-sm mt-1">Home</span>
             </div>

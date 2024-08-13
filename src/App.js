@@ -1,16 +1,12 @@
 import './App.css';
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Jokes from './component/jokes'; // Import TechJokes component
+import Jokes from './component/jokes';
 import HomePage from './page/home';
-
-
 
 function App() {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
-
- 
 
   const [isLoading, setIsLoading] = useState(true);
   const [name, setName] = useState('');
@@ -40,6 +36,10 @@ function App() {
     }
   };
 
+  const handleGoHome = () => {
+    setIsLoading(true);
+  };
+
   return (
     <div className="App">
       {isLoading && (
@@ -53,7 +53,6 @@ function App() {
             />
             <h1 className="text-2xl md:text-3xl mb-4 text-center hidden md:block">Welcome to Liz's little Space</h1>
           </div>
-          {/* Include TechJokes component here */}
           <Jokes />
           <form onSubmit={handleSubmit} className="flex flex-col items-center">
             <input
@@ -78,15 +77,7 @@ function App() {
       {!isLoading && (
         // Render content after loading
         <>
-          <HomePage isHomePage={isHomePage} />
-
-          {/*<Routes>
-           
-            <Route path="/initiative1" element={<Initiative1 />} />
-            <Route path="/initiative2" element={<Initiative2 />} />
-            <Route path="/initiative3" element={<Initiative3 />} />
-      </Routes>*/}
-          
+          <HomePage isHomePage={isHomePage} handleGoHome={handleGoHome} />
         </>
       )}
     </div>
