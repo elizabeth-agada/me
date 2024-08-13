@@ -35,13 +35,13 @@ function HomePage({ isHomePage }) {
   return (
     <div className="min-h-screen">
       {isHomePage && ( // Render loading animation only on the home page
-        <Link to="/" className="loading-animation h-full md:h-screen p-6 md:p-32 text-white flex flex-col justify-center items-center">
+        <Link to="/" className="loading-animation h-full md:h-screen p-6 md:p-32 flex flex-col justify-center items-center">
           {/* Loading animation content */}
         </Link>
       )}
       <div className="fixed top-0 left-0 w-full h-full bg-cover" style={{ backgroundImage: `url(./bg.jpg)` }} />
       <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
-        <div className="mt-28 md:mt-60 items-center mb-4 md:text-3xl rounded-lg border-gray-200 py-2 px-10 md:px-32 text-white fade-in-up">
+        <div className="mt-28 md:mt-60 items-center mb-4 md:text-3xl rounded-lg py-2 px-10 md:px-32 text-white fade-in-up">
           <h1 className="text-2xl">{nameLetters}</h1>
           <h1 className=''>Frontend Engineer</h1>
         </div>

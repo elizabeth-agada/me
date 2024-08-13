@@ -35,23 +35,25 @@ function Blog({ onClose }) {
 
   const settings = {
     dots: true,
-    infinite: true,
-    speed: 500,
+    infinite: true, 
+    speed: 2000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    centerMode: true,    // Enable center mode
-    centerPadding: '50px', // Adjust padding as needed
-    responsive: [ // Add responsive settings
-    
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 0, // Set to 0 for continuous scroll
+    cssEase: 'linear', // Use linear easing for smooth scrolling
+    centerMode: true,
+    centerPadding: '50px',
+    responsive: [
       {
-        breakpoint: 1024, // Adjust breakpoint for smaller screens
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 640, // Adjust breakpoint for mobile
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -80,7 +82,7 @@ function Blog({ onClose }) {
                     alt={initiative.title}
                     className="w-full h-12 md:h-48 object-cover"
                   />
-                  <div className="text-left">
+                  <div className="text-left p-3 mb-6 h-32">
                     <h3 className="md:text-xl font-bold mb-2">{initiative.title}</h3>
                     <p className="sm:text-sm text-gray-600">
                       {initiative.description} <span className="text-blue-500">Read more</span> {/* Use a span for styling the "Read more" link */}
