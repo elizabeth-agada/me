@@ -45,6 +45,7 @@ function HomePage({ isHomePage, handleGoHome }) {
           <h1 className="text-2xl">{nameLetters}</h1>
           <h1 className=''>Frontend Engineer</h1>
         </div>
+        <p className="text-white">Currently Building <a href="http://so-little.vercel.app" className="text-red-500">solittle</a></p>
         <div className="px-5 md:px-0 p-4 rounded-md shadow-md max-w-md w-full mx-auto mb-8 md:bg-black md:bg-opacity-50 md:backdrop-blur-lg">
           <div className="space-y-5 md:space-y-0 md:grid grid-cols-5 gap-4 mt-4">
             {/* Home Icon */}

@@ -31,7 +31,7 @@ function Contact({ onClose }) {
   };
 
   return (
-    <section id="contact" className="relative bg-gradient-to-r from-[#1E3A8A] to-[#060229e7] text-white p-8">
+    <section id="contact" className="relative bg-gradient-to-r from-[#1E3A8A] to-[#060229e7] text-white p-8  mb-10 md:mb-0">
       <div className="container mx-auto px-4">
         <button onClick={handleClose} className="absolute top-0 right-0 m-4 text-gray-200 hover:text-white">
           <FaTimes />

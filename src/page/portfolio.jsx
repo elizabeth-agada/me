@@ -46,14 +46,14 @@ function Portfolio({ onClose }) {
   ];
 
   return (
-    <section id="portfolio" className="h-screen overflow-y-auto mt-20 md:mt-56 p-6 bg-gradient-to-r from-[#1E3A8A] to-[#060229e7]  text-white relative md:w-2/3">
+    <section id="portfolio" className="h-screen overflow-y-auto  md:mt-56 p-6 bg-gradient-to-r from-[#1E3A8A] to-[#060229e7]  text-white relative md:w-2/3  mb-10 md:mb-0">
       <div className="container mx-auto px-4 mb-10 md:mb-32">
-        <button onClick={handleClose} className="absolute top-0 right-0 m-4 text-gray-200 hover:text-white z-10">
+        <button onClick={handleClose} className="absolute top-0 right-0 mt-10 m-4 text-gray-200 hover:text-white z-10">
           <FaTimes />
         </button>
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 text-white">Portfolio</h2>
   
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 z-50">
           {projects.map((project, index) => (
             <a 
               key={index} 

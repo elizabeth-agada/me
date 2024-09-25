@@ -15,7 +15,7 @@ function About({ onClose }) { // Receive onClose function as a prop
   };
 
   return (
-    <div className="bg-gradient-to-r from-[#1E3A8A] to-[#060229e7] md:py-20 relative md:w-2/3">
+    <div className="bg-gradient-to-r from-[#1E3A8A] to-[#060229e7] md:py-20 relative md:w-2/3 mb-10 md:mb-0">
       {/* Close icon */}
       <button onClick={handleClose} className="absolute top-0 right-0 m-4 text-gray-200 hover:text-white">
         <FaTimes />
