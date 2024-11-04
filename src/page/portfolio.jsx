@@ -64,7 +64,7 @@ function Portfolio({ onClose }) {
             >
               <img src={project.image} alt={project.title} className="w-full object-cover" />
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-black">{project.title}</h3>
+                <h3 className="text-xl font-bold mb-2 text-black/10">{project.title}</h3>
                 <p className="text-gray-600 mb-4">{project.description}</p>
                 <span className="text-blue-500 hover:underline">View Project</span>
               </div>
