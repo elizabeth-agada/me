@@ -41,7 +41,7 @@ function Portfolio({ onClose }) {
       title: 'GDG Maiduguri Event Landing Page',
       description: 'The landing page for GDG Maiduguri I/O Extented landing page',
       image: './gdgmaid.png',
-      link: 'https://gdgmaiduguri.com/',
+      link: 'https://gdg-maid.vercel.app/',
     },
   ];
 
